@@ -5,3 +5,4 @@ plots/
 poly_res/
 cubic_res/
 svi_res/
+__pycache__/
