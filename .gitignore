@@ -1,0 +1,7 @@
+data/
+.ipynb_checkpoints/
+*.feather
+plots/
+poly_res/
+cubic_res/
+svi_res/
