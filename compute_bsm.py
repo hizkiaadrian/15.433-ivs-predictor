@@ -22,6 +22,7 @@ if doSave == 'Y':
     calls.reset_index(drop=True, inplace=True)
     puts.reset_index(drop=True, inplace=True)
 
+    # Dates in the data are not in a uniform format - some are dd-mm-yy, some are YYYY-mm-dd
     try:
         calls['date'] = calls['date'].apply(lambda x: datetime.strftime(datetime.strptime(x, '%d-%m-%y'), '%Y-%m-%d'))
         puts['date'] = puts['date'].apply(lambda x: datetime.strftime(datetime.strptime(x, '%d-%m-%y'), '%Y-%m-%d'))
@@ -31,5 +32,5 @@ if doSave == 'Y':
     calls.to_feather('calls_bsm.feather')
     puts.to_feather('puts_bsm.feather')
     
-else:
+else:s
     return
